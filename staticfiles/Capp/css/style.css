@@ -1,0 +1,8 @@
+body{
+
+     font-color: red;
+     background-image: url('{%static 'images/4.jpg'%}');
+     background-repeat: no-repeat;
+     background-size: 100%;
+     font-family: courier;
+}

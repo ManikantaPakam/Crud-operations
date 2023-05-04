@@ -1,0 +1,42 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{%static 'css/style.css'%}">
+</head>
+<body style="background-image: url('{%static 'images/4.jpg'%}')">
+<center>
+    <h1>CURD OPERATIONS</h1>
+    <p style="font-family:courier">Today we will learn CURD_operations, how to create,update,read and delete operations in sql. This is a very important topic in django class.</p>
+<hr>
+    <b>
+    <table border="2">
+        <thead>
+        <tr>
+                <th>eno</th>
+                <th>ename</th>
+                <th>esalary</th>
+                <th>eaddress</th>
+                <th>eage</th>
+                <th>ACTIONS</th>
+        </tr>
+        </thead>
+        {%for emps in e%}
+        <tr>
+            <td>{{emps.eno}}</td>
+            <td>{{emps.ename}}</td>
+            <td>{{emps.esalary}}</td>
+            <td>{{emps.eaddress}}</td>
+            <td>{{emps.eage}}</td>
+            <td><a href="/delete/{{emps.id}}"><button>Delete</button></a>|<a href="/update/{{emps.id}}"><button>Update</button></a></td>
+        </tr>
+        {%endfor%}
+    </table></b>
+
+        <a href="/form"><button>Input</button></a>
+
+</center>
+</body>
+</html>
